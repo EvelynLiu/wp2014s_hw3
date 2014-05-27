@@ -1,4 +1,59 @@
 (function(){
+	Parse.initialize("s4747jSandiQGpXlbizjGZMgXJAepvnGnbc7NCmu","PihDCqy36lpBPQc8rmiEH477nSD0tT1vrSSjBAm0");
+	var e={}; // e--->template
+	["loginView","evaluationView","updateSuccessView"].forEach(function(t){
+		templateCode=document.getElementById(t).text;
+		e[t]=doT.template(templateCode)
+	});
+	var t={
+		loginRequiredView:function(e){
+			return function(){
+				var t=Parse.User.current();
+				if(t){
+					e()
+				}
+				else{
+					window.location.hash="login/"+window.location.hash
+				}
+			}
+		}
+	};
+	var n={ //n----->handler
+		navbar:function(){
+			var e=Parse.User.current();
+			if(e){
+				document.getElementById("loginButton").style.display="none";
+				document.getElementById("logoutButton").style.display="block";
+				document.getElementById("evaluationButton").style.display="block"
+			}
+			else{
+				document.getElementById("loginButton").style.display="block";
+				document.getElementById("logoutButton").style.display="none";
+				document.getElementById("evaluationButton").style.display="none"
+			}
+			document.getElementById("logoutButton").addEventListener("click",function(){
+				Parse.User.logOut();
+				n.navbar();
+				window.location.hash="login/"
+			})
+		},
+	}
+	var r=Parse.Router.extend({
+		routes:{
+			"":"indexView",
+			"peer-evaluation/":"evaluationView",
+			"login/*redirect":"loginView"
+		},
+		indexView:n.evaluationView,
+		evaluationView:n.evaluationView,
+		loginView:n.loginView
+	});
+	this.Router=new r;
+	Parse.history.start();
+	n.navbar()
+})
+()
+/*(function(){
   Parse.initialize("DW5mOdnS4vTuOSb2did1Rb2HDulVVjPOCZZE6eGK","PvS7AF0t6hk04XSyhhUWoHDJsIQrlmNZZwFS4xOw");//初始化Parse()
   
   var templates = {};
@@ -192,4 +247,4 @@
   this.Router=new router;
   Parse.history.start();
   handler.navbar();
-})();
+})();*/
