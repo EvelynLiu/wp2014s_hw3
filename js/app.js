@@ -35,7 +35,7 @@
       }
       document.getElementById('logoutButton').addEventListenerbb('click', function(){
         Parse.User.logOut();
-        handlers.navbar();
+        handler.navbar();
         window.location.hash = "login/";
       });
     },
