@@ -1,5 +1,5 @@
 (function(){
-	Parse.initialize("s4747jSandiQGpXlbizjGZMgXJAepvnGnbc7NCmu","PihDCqy36lpBPQc8rmiEH477nSD0tT1vrSSjBAm0");
+	Parse.initialize("DW5mOdnS4vTuOSb2did1Rb2HDulVVjPOCZZE6eGK","PvS7AF0t6hk04XSyhhUWoHDJsIQrlmNZZwFS4xOw");
 	var e={}; // e--->template
 	["loginView","evaluationView","updateSuccessView"].forEach(function(t){
 		templateCode=document.getElementById(t).text;
@@ -52,7 +52,7 @@
 	Parse.history.start();
 	n.navbar()
 })
-()
+()*/
 /*(function(){
   Parse.initialize("DW5mOdnS4vTuOSb2did1Rb2HDulVVjPOCZZE6eGK","PvS7AF0t6hk04XSyhhUWoHDJsIQrlmNZZwFS4xOw");//初始化Parse()
   
