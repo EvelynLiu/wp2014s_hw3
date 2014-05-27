@@ -1,4 +1,4 @@
-(function(){
+/*(function(){
 	Parse.initialize("DW5mOdnS4vTuOSb2did1Rb2HDulVVjPOCZZE6eGK","PvS7AF0t6hk04XSyhhUWoHDJsIQrlmNZZwFS4xOw");
 	var e={}; // e--->template
 	["loginView","evaluationView","updateSuccessView"].forEach(function(t){
@@ -176,12 +176,12 @@
 	Parse.history.start();
 	n.navbar()
 })
-()
-/*(function(){
+()*/
+(function(){
   Parse.initialize("DW5mOdnS4vTuOSb2did1Rb2HDulVVjPOCZZE6eGK","PvS7AF0t6hk04XSyhhUWoHDJsIQrlmNZZwFS4xOw");//初始化Parse()
   
   var templates = {};
-  ['loginView', 'evaluationView', 'updateSuccessView'].forEach(function(t){
+  ["loginView", "evaluationView", "updateSuccessView"].forEach(function(t){
     var tpl = document.getElementById(t).text;
     templates[t] = doT.template(tpl);
   });//編譯template engine函數();
@@ -204,15 +204,15 @@
     navbar: function(){
       var currentUser = Parse.User.current();
       if(currentUser){
-        document.getElementById('loginButton').style.display = 'none';
-        document.getElementById('evaluationButton').style.display = 'block';
-        document.getElementById('logoutButton').style.display = 'block';     
+        document.getElementById("loginButton").style.display = "none";
+        document.getElementById("evaluationButton").style.display = "block";
+        document.getElementById("logoutButton").style.display = "block";     
       } else {
-        document.getElementById('loginButton').style.display = 'block';
-        document.getElementById('evaluationButton').style.display = 'none';
-        document.getElementById('logoutButton').style.display = 'none';     
+        document.getElementById("loginButton").style.display = "block";
+        document.getElementById("evaluationButton").style.display = "none";
+        document.getElementById("logoutButton").style.display = "none";     
       }
-      document.getElementById('logoutButton').addEventListenerbb('click', function(){
+      document.getElementById("logoutButton").addEventListenerbb("click", function(){
         Parse.User.logOut();
         handler.navbar();
         window.location.hash = "login/";
@@ -359,9 +359,9 @@
 
   var router = Parse.Router.extend({
     routes:{
-    	'':'indexView',
-    	'login/*redirect':'loginView',
-    	'peer-evaluation/':'evaluationView'
+    	"":"indexView",
+    	"login/*redirect":"loginView",
+    	"peer-evaluation/":"evaluationView"
     },
 	indexView:handler.evaluationView,
 	loginView:handler.loginView,
