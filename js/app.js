@@ -107,9 +107,15 @@
         }
       }); 
     }),
-	scoreView: function(){
-
-	},
+	scoreView: commons.loginRequiredView(function () {
+		var TeamMembers = TAHelp.getMemberlistOf(currentUser.get('username')).filter(function(e){
+              return (e.StudentId !== currentUser.get('username') ) ? true : false;
+            }).map(function(e){
+              e.scores = ['0', '0', '0', '0'];
+              return e;
+            });
+		document.getElementById('content').innerHTML = templates.scoreView(TeamMembers);
+	}),
 
 	// 登入頁面
     loginView: function (redirect) {
@@ -216,7 +222,7 @@
     indexView: handlers.evaluationView,
     evaluationView: handlers.evaluationView,
     loginView: handlers.loginView,
-    scoreView: handlers.evaluationView,
+    scoreView: handlers.scoreView,
   });
   //讓router活起來
   this.Router = new Router();
