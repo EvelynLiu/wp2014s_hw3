@@ -62,7 +62,7 @@
 						var s=i.toJSON().evaluations
 					}
 					document.getElementById("content").innerHTML=e.evaluationView(s);
-					document.getElementById("evaluationForm-submit").value=i===undefined?"�銵典":"靽格銵典";
+					document.getElementById("evaluationForm-submit").value=i===undefined?"Submit the form":"Modify the form";
 					document.getElementById("evaluationForm").addEventListener("submit",function(){
 						for(var o=0;o<s.length;o++){
 							for(var u=0;u<s[o].scores.length;u++){
