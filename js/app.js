@@ -138,11 +138,11 @@
       // 把版型印到瀏覽器上
       document.getElementById("content").innerHTML = templates.loginView();
       // 登入
-      /*document.getElementById("form-signin-student-id").addEventListener("keyup", function () {
+      document.getElementById("form-signin-student-id").addEventListener("keyup", function () {
         // 綁定登入表單的學號檢查事件(打字時)
         showMessage('form-signin-message', function(){return checkVaildStudentID("form-signin-student-id")}
             , 'The student is not one of the class students.');
-      });*/
+      });
       document.getElementById("form-signin").addEventListener("submit", function () {
         // 綁定登入表單的學號檢查事件(送出時)
         if (!checkVaildStudentID("form-signin-student-id")) {
@@ -163,11 +163,11 @@
           });
       }, false);
       // 註冊
-      /*document.getElementById("form-signup-student-id").addEventListener("keyup", function () {
+      document.getElementById("form-signup-student-id").addEventListener("keyup", function () {
         // 綁定註冊表單的學號檢查事件(打字時)
         showMessage('form-signup-message', function(){return checkVaildStudentID("form-signup-student-id")}
             , 'The student is not one of the class students.');
-      });*/
+      });
       document.getElementById("form-signup-password1").addEventListener('keyup', passwordMatch);
       document.getElementById("form-signup").addEventListener("submit", function (){
         // 綁定註冊表單的學號檢查事件(送出時)
