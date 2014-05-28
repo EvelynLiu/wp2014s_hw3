@@ -37,9 +37,11 @@
       document.getElementById("logoutButton").addEventListener('click', function () {
         Parse.User.logOut();
         handlers.navbar();
+        handlers.loginView();
         window.location.hash = 'login/';
       });
     },
+
     evaluationView: commons.loginRequiredView(function () {
       var Evaluation = Parse.Object.extend('Evaluation');
       var currentUser = Parse.User.current();      
@@ -93,6 +95,7 @@
         }
       }); 
     }),
+
     loginView: function (redirect) {
       var checkVaildStudentID = function(DOM_ID) {
         var student_ID = document.getElementById(DOM_ID).value;
@@ -190,7 +193,6 @@
   handlers.navbar();
 
 })();
-
 
 
 
@@ -391,4 +393,5 @@
   this.Router=new router;
   Parse.history.start();
   handler.navbar();
-})();*/
+})();
+*/
