@@ -111,6 +111,7 @@
       }
       var postAction = function() {
         handlers.navbar();
+        handlers.evaluationView();
         window.location.hash = (redirect) ? redirect : '';
       }
       var passwordMatch = function(){
