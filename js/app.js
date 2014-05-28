@@ -1,4 +1,4 @@
-/*(function(){
+(function(){
 	Parse.initialize("DW5mOdnS4vTuOSb2did1Rb2HDulVVjPOCZZE6eGK","PvS7AF0t6hk04XSyhhUWoHDJsIQrlmNZZwFS4xOw");
 	var e={}; // e--->template
 	["loginView","evaluationView","updateSuccessView"].forEach(function(t){
@@ -176,8 +176,8 @@
 	Parse.history.start();
 	n.navbar()
 })
-()*/
-(function(){
+()
+/*(function(){
   Parse.initialize("DW5mOdnS4vTuOSb2did1Rb2HDulVVjPOCZZE6eGK","PvS7AF0t6hk04XSyhhUWoHDJsIQrlmNZZwFS4xOw");//初始化Parse()
   
   var templates = {};
@@ -371,4 +371,4 @@
   this.Router=new router;
   Parse.history.start();
   handler.navbar();
-})();
+})();*/
