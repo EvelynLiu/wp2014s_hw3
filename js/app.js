@@ -216,7 +216,7 @@
         Parse.User.logOut();
         handler.navbar();
         window.location.hash = "login/";
-      });
+      })
     },
     loginView: function(t){
     	var r=function(e){ // check id 
