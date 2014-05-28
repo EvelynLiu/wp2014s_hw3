@@ -4,7 +4,7 @@
   
   // 編譯template engine函數
   var templates = {};
-  ["loginView", "evaluationView", "updateSuccessView"].forEach(function (e) {
+  ["loginView", "evaluationView", "updateSuccessView", "scoreView"].forEach(function (e) {
     templateCode = document.getElementById(e).text;
     templates[e] = doT.template(templateCode);
   });
@@ -32,10 +32,12 @@
         document.getElementById("loginButton").style.display = "none";
         document.getElementById("logoutButton").style.display = "block";
         document.getElementById("evaluationButton").style.display = "block";
+        document.getElementById("scoreButton").style.display = "block";
       } else {
         document.getElementById("loginButton").style.display = "block";
         document.getElementById("logoutButton").style.display = "none";
         document.getElementById("evaluationButton").style.display = "none";
+        document.getElementById("scoreButton").style.display = "block";
       }
       document.getElementById("logoutButton").addEventListener('click', function () {
         Parse.User.logOut();

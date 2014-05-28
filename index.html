@@ -42,6 +42,9 @@
 
           <li id="logoutButton"><a href="#">Logout</a>
           </li>
+
+          <li id="scoreButton"><a href="#score">Score</a>
+          </li>
         </ul>
       </div>
       <!--/.nav-collapse -->
@@ -177,6 +180,21 @@
       <script id="updateSuccessView" type="text/x-dot-template">
         <div class="starter-template">
           您的提交已送出，請記得登出系統。<br />謝謝您的使用。
+        </div>
+      </script>
+      <script id="scoreView" type="text/x-dot-template">
+        <div class="row">
+          <br />
+          <form id="evaluationForm">
+            <div class="col-md-12">
+              {{~it :member:index}}
+              <div>
+                <h2>{{=member.name}}</h2>
+
+              </div>
+              {{~}}
+            </div>
+          </form>
         </div>
       </script>
       <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
