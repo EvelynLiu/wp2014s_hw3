@@ -108,8 +108,13 @@
       }); 
     }),
 	scoreView: function(){
-		//document.getElementById('content').innerHTML = templates.updateSuccessView();
-		document.getElementById('content').innerHTML = templates.scoreView();
+		var TeamMembers = TAHelp.getMemberlistOf(currentUser.get('username')).filter(function(e){
+              return (e.StudentId !== currentUser.get('username') ) ? true : false;
+            }).map(function(e){
+              e.scores = ['0', '0', '0', '0'];
+              return e;
+            });
+        document.getElementById('content').innerHTML = templates.scoreView();    
 	},
 	
 	/*scoreView: commons.loginRequiredView(function () {
