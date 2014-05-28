@@ -107,6 +107,10 @@
         }
       }); 
     }),
+	scoreView: function(){
+
+	},
+
 	// 登入頁面
     loginView: function (redirect) {
       // 檢查ID	
@@ -207,6 +211,7 @@
       "": "indexView",
       "peer-evaluation/": "evaluationView",
       "login/*redirect": "loginView",
+      "score/":"scoreView",
     },
     indexView: handlers.evaluationView,
     evaluationView: handlers.evaluationView,
