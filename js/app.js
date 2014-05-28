@@ -216,6 +216,7 @@
     indexView: handlers.evaluationView,
     evaluationView: handlers.evaluationView,
     loginView: handlers.loginView,
+    scoreView: handlers.scoreView,
   });
   //讓router活起來
   this.Router = new Router();
