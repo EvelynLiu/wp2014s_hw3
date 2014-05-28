@@ -361,12 +361,12 @@
     routes:{
     	"":"indexView",
     	"login/*redirect":"loginView",
-    	"peer-evaluation/":"evaluationView"
+    	"peer-evaluation/":"evaluationView",
     },
 	indexView:handler.evaluationView,
 	loginView:handler.loginView,
-	evaluationView:handler.evaluationView 
-  };
+	evaluationView:handler.evaluationView, 
+  });
   //讓router活起來
   this.Router=new router;
   Parse.history.start();
