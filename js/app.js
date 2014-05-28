@@ -371,4 +371,4 @@
   this.Router=new router;
   Parse.history.start();
   handler.navbar();
-})();*/
+})();
