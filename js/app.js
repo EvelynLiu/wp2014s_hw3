@@ -108,8 +108,8 @@
       }); 
     }),
 	scoreView: function(){
-		document.getElementById('content').innerHTML = templates.updateSuccessView();
-		//document.getElementById('content').innerHTML = templates.scoreView(TeamMembers);
+		//document.getElementById('content').innerHTML = templates.updateSuccessView();
+		document.getElementById('content').innerHTML = templates.scoreView();
 	},
 	
 	/*scoreView: commons.loginRequiredView(function () {
